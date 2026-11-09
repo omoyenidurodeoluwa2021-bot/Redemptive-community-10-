@@ -1,0 +1,476 @@
+
+/* =================================
+   1. GENERAL WEBSITE SETTINGS
+================================= */
+
+:root {
+    --primary-blue: #64D0FF;
+    --deep-blue: #1EB7E8;
+    --light-blue: #B3E5FC;
+    --background: #F3FAFF;
+    --white: #FFFFFF;
+    --dark-text: #183047;
+    --grey-text: #64748B;
+    --border-color: #D9EDF8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+
+/* =================================
+   2. HEADER AND NAVIGATION
+================================= */
+
+.main-header {
+    background-color: var(--white);
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-bottom: 2px solid var(--light-blue);
+}
+
+.logo h1 {
+    color: var(--deep-blue);
+    font-size: 25px;
+}
+
+.logo p {
+    color: var(--grey-text);
+    font-size: 13px;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.main-nav a:hover {
+    color: var(--deep-blue);
+}
+
+
+/* =================================
+   3. GENERAL SECTION SETTINGS
+================================= */
+
+section {
+    padding: 65px 6%;
+}
+
+section h2 {
+    color: var(--deep-blue);
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+section > p {
+    color: var(--grey-text);
+    margin-bottom: 25px;
+}
+
+section h3 {
+    margin-bottom: 10px;
+}
+
+
+/* =================================
+   4. HOME / WELCOME SECTION
+================================= */
+
+.home-section {
+    background: linear-gradient(
+        135deg,
+        #64D0FF,
+        #B3E5FC
+    );
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.welcome-content {
+    max-width: 750px;
+}
+
+.welcome-content h2 {
+    color: #12334A;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.welcome-content p {
+    font-size: 17px;
+    margin-bottom: 25px;
+    color: #23465D;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--white);
+    color: var(--deep-blue);
+    padding: 12px 22px;
+    margin: 5px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--deep-blue);
+    color: var(--white);
+}
+
+
+/* =================================
+   5. ANNOUNCEMENTS
+================================= */
+
+.announcement-section {
+    background-color: var(--white);
+}
+
+.announcement-container {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+    );
+    gap: 20px;
+}
+
+
+/* =================================
+   6. CARDS
+================================= */
+
+.attendance-container,
+.events-container,
+.feedback-container,
+.membership-container,
+.dashboard-container,
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+    );
+    gap: 20px;
+}
+
+.attendance-card,
+.event-card,
+.feedback-card,
+.membership-card,
+.dashboard-card,
+.contact-card,
+.announcement-card {
+    background-color: var(--white);
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(30, 100, 140, 0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.attendance-card:hover,
+.event-card:hover,
+.feedback-card:hover,
+.membership-card:hover,
+.dashboard-card:hover,
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(30, 100, 140, 0.12);
+}
+
+.attendance-card h3,
+.event-card h3,
+.feedback-card h3,
+.membership-card h3,
+.dashboard-card h3,
+.contact-card h3 {
+    color: var(--deep-blue);
+}
+
+.attendance-card p,
+.event-card p,
+.feedback-card p,
+.membership-card p,
+.dashboard-card p,
+.contact-card p {
+    color: var(--grey-text);
+    margin-bottom: 12px;
+}
+
+.attendance-card a,
+.contact-card a {
+    color: var(--deep-blue);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.event-card time {
+    color: var(--grey-text);
+    font-size: 13px;
+}
+
+
+/* =================================
+   7. FORM DESIGN
+================================= */
+
+form,
+.attendance-form,
+.event-submission,
+.feedback-form,
+.registration-form {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    max-width: 650px;
+    margin-top: 30px;
+}
+
+form label {
+    display: block;
+    margin: 15px 0 6px;
+    font-weight: bold;
+    color: var(--dark-text);
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 7px;
+    font-size: 15px;
+    font-family: inherit;
+    background-color: #FAFDFF;
+    color: var(--dark-text);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--deep-blue);
+    box-shadow: 0 0 0 3px rgba(30, 183, 232, 0.15);
+}
+
+textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+    accent-color: var(--deep-blue);
+}
+
+form button {
+    background-color: var(--deep-blue);
+    color: var(--white);
+    border: none;
+    padding: 13px 22px;
+    border-radius: 7px;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: #128CB8;
+}
+
+
+/* =================================
+   8. SECTION BACKGROUNDS
+================================= */
+
+.attendance-section,
+.feedback-section,
+.dashboard-section,
+.prayer-section {
+    background-color: var(--background);
+}
+
+.events-section,
+.membership-section {
+    background-color: #EAF7FF;
+}
+
+.announcement-section,
+.contact-section {
+    background-color: var(--white);
+}
+
+
+/* =================================
+   9. CONTACT AND ADDRESS
+================================= */
+
+.contact-card address {
+    font-style: normal;
+    color: var(--grey-text);
+    line-height: 1.9;
+}
+
+
+/* =================================
+   10. FOOTER
+================================= */
+
+.main-footer {
+    background-color: #183047;
+    color: var(--white);
+    text-align: center;
+    padding: 40px 6%;
+}
+
+.main-footer h2 {
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+}
+
+.main-footer p {
+    margin: 10px 0;
+    color: #D5EAF5;
+}
+
+.footer-nav {
+    margin: 20px 0;
+}
+
+.footer-nav a {
+    display: inline-block;
+    color: var(--white);
+    text-decoration: none;
+    margin: 7px 12px;
+}
+
+.footer-nav a:hover {
+    color: var(--primary-blue);
+}
+
+
+/* =================================
+   11. JAVASCRIPT FEEDBACK MESSAGE
+================================= */
+
+.form-message {
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 7px;
+    background-color: #E3F7FF;
+    color: #126A8D;
+    font-size: 14px;
+}
+
+
+/* =================================
+   12. MOBILE RESPONSIVENESS
+================================= */
+
+@media (max-width: 768px) {
+
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-nav ul {
+        gap: 12px;
+    }
+
+    .main-nav a {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 45px 5%;
+    }
+
+    .welcome-content h2 {
+        font-size: 27px;
+    }
+
+    section h2 {
+        font-size: 23px;
+    }
+
+    .home-section {
+        min-height: 350px;
+    }
+
+    .attendance-container,
+    .events-container,
+    .feedback-container,
+    .membership-container,
+    .dashboard-container,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    form,
+    .attendance-form,
+    .event-submission,
+    .feedback-form,
+    .registration-form {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .logo h1 {
+        font-size: 21px;
+    }
+
+    .main-nav ul {
+        gap: 10px;
+    }
+
+    .main-nav a {
+        font-size: 12px;
+    }
+
+    .welcome-content h2 {
+        font-size: 23px;
+    }
+
+}
